@@ -30,16 +30,22 @@
               }
             },
             animation: {
-              'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
-              'fade-in': 'fadeIn 1s ease-out forwards',
+              'fade-in-up': 'fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+              'fade-in': 'fadeIn 1.2s ease-out forwards',
               'float': 'float 6s ease-in-out infinite',
+              'float-slow': 'float 8s ease-in-out infinite',
               'slide-in-right': 'slideInRight 0.8s ease-out forwards',
               'bounce-slow': 'bounce 3s infinite',
+              'hex-pulse': 'hexPulse 4s ease-in-out infinite',
+              'pulse-soft': 'pulseSoft 3s ease-in-out infinite',
+              'flow-dash': 'flowDash 3s linear infinite',
+              'spin-slow': 'spin 20s linear infinite',
+              'orbit': 'orbit 15s linear infinite',
             },
             keyframes: {
               fadeInUp: {
-                '0%': { opacity: '0', transform: 'translateY(40px)' },
-                '100%': { opacity: '1', transform: 'translateY(0)' },
+                '0%': { opacity: '0', transform: 'translateY(30px) scale(0.98)' },
+                '100%': { opacity: '1', transform: 'translateY(0) scale(1)' },
               },
               fadeIn: {
                 '0%': { opacity: '0' },
@@ -47,11 +53,22 @@
               },
               float: {
                 '0%, 100%': { transform: 'translateY(0)' },
-                '50%': { transform: 'translateY(-20px)' },
+                '50%': { transform: 'translateY(-15px)' },
               },
-              slideInRight: {
-                '0%': { opacity: '0', transform: 'translateX(40px)' },
-                '100%': { opacity: '1', transform: 'translateX(0)' },
+              pulseSoft: {
+                '0%, 100%': { opacity: '1', transform: 'scale(1)' },
+                '50%': { opacity: '0.8', transform: 'scale(1.02)' },
+              },
+              hexPulse: {
+                '0%, 100%': { transform: 'scale(1)', filter: 'brightness(1)' },
+                '50%': { transform: 'scale(1.05)', filter: 'brightness(1.2)' },
+              },
+              flowDash: {
+                'to': { 'stroke-dashoffset': '-20' }
+              },
+              orbit: {
+                'from': { transform: 'rotate(0deg) translateX(10px) rotate(0deg)' },
+                'to': { transform: 'rotate(360deg) translateX(10px) rotate(-360deg)' }
               }
             }
           }
@@ -62,38 +79,30 @@
       body {
         scroll-behavior: smooth;
       }
-      .gradient-bg {
-        background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
-      }
-      .glass-card {
-        background: rgba(255, 255, 255, 0.8);
-        backdrop-filter: blur(12px);
-        border: 1px solid rgba(255, 255, 255, 0.3);
-      }
-      .image-zoom:hover img {
-        transform: scale(1.1);
-      }
       .reveal {
         opacity: 0;
-        transition: all 0.8s ease-out;
+        transform: translateY(20px);
+        transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1);
       }
       .reveal.active {
         opacity: 1;
         transform: translateY(0);
       }
-      /* Custom Scrollbar */
+      /* Staggered Delay Helpers */
+      .stagger-1 { transition-delay: 100ms; }
+      .stagger-2 { transition-delay: 200ms; }
+      .stagger-3 { transition-delay: 300ms; }
+      .stagger-4 { transition-delay: 400ms; }
+      
       .custom-scrollbar::-webkit-scrollbar {
-        width: 8px;
+        width: 6px;
       }
       .custom-scrollbar::-webkit-scrollbar-track {
-        background: #f1f1f1;
+        background: transparent;
       }
       .custom-scrollbar::-webkit-scrollbar-thumb {
         background: #2563eb;
-        border-radius: 4px;
-      }
-      .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-        background: #1d4ed8;
+        border-radius: 10px;
       }
     </style>
   <script type="importmap">
@@ -109,7 +118,7 @@
 </script>
 <link rel="stylesheet" href="/index.css">
 </head>
-  <body class="bg-slate-50 text-slate-900">
+  <body class="bg-slate-50 text-slate-900 overflow-x-hidden">
     <div id="root"></div>
   <script type="module" src="/index.tsx"></script>
 </body>
