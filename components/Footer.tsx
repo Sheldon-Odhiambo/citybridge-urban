@@ -2,48 +2,78 @@
 import React from 'react';
 
 const Footer: React.FC = () => {
+  const socialLinks = [
+    { 
+      name: 'TikTok', 
+      path: 'M12.53.02C13.84 0 15.14.01 16.44 0c.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.28-2.26.74-4.63 2.58-5.93 1.27-.92 2.82-1.41 4.39-1.42.13 0 .26 0 .39.01v4.03c-1.11-.04-2.25.18-3.23.76-1.03.62-1.69 1.74-1.81 2.93-.16 1.19.44 2.45 1.45 3.09.83.55 1.83.74 2.81.6 1.13-.16 2.15-.9 2.7-1.92.31-.58.45-1.24.45-1.91V.02z',
+      hoverClass: 'hover:bg-black hover:text-[#25f4ee] hover:shadow-[0_0_20px_rgba(37,244,238,0.5)]'
+    },
+    { 
+      name: 'Instagram', 
+      path: 'M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z',
+      hoverClass: 'hover:bg-gradient-to-tr hover:from-[#f9ce34] hover:via-[#ee2a7b] hover:to-[#6228d7] hover:text-white hover:shadow-[0_0_20px_rgba(238,42,123,0.5)]'
+    },
+    { 
+      name: 'YouTube', 
+      path: 'M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z',
+      hoverClass: 'hover:bg-[#ff0000] hover:text-white hover:shadow-[0_0_20px_rgba(255,0,0,0.5)]'
+    }
+  ];
+
   return (
-    <footer className="relative min-h-[800px] bg-slate-950 text-slate-400 overflow-hidden flex flex-col justify-end">
-      {/* Visual Layer: Fixed High-Quality Background */}
+    <footer className="relative min-h-[600px] bg-slate-950 text-slate-400 overflow-hidden flex flex-col justify-end">
+      {/* Background with Urban Texture */}
       <div 
-        className="absolute inset-0 bg-fixed bg-cover bg-center pointer-events-none opacity-40 scale-105"
+        className="absolute inset-0 bg-fixed bg-cover bg-center pointer-events-none opacity-20"
         style={{ backgroundImage: `url('https://images.unsplash.com/photo-1449824913935-59a10b8d2000?auto=format&fit=crop&q=80&w=2500')` }}
       ></div>
       
-      {/* Gradient Overlays for Depth */}
-      <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/80 to-transparent"></div>
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,rgba(37,99,235,0.1)_0%,transparent_50%)]"></div>
+      <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/90 to-transparent"></div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full pt-40 pb-20">
-        <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-20 mb-32">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full pt-20 pb-12">
+        
+        {/* FOOTER CALL TO ACTION */}
+        <div className="grid md:grid-cols-2 gap-12 items-center pb-20 border-b border-white/5 mb-16 reveal">
+          <div className="space-y-4">
+            <h4 className="text-white font-display font-black text-2xl md:text-3xl uppercase tracking-tighter">Get Involved Today</h4>
+            <p className="text-slate-300 text-base font-light italic opacity-80">Whether through mentorship, volunteering, or financial partnership—every hand helps rebuild the city.</p>
+          </div>
+          <div className="flex flex-wrap gap-4 md:justify-end">
+            <a href="mailto:info@citybridgeurban.org?subject=I%20want%20to%20volunteer" className="group bg-primary-600 text-white px-8 py-3 rounded-xl font-black uppercase tracking-widest text-[10px] hover:bg-primary-500 hover:-translate-y-1 transition-all shadow-xl flex items-center gap-2">
+              Volunteer
+              <svg className="w-3 h-3 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M9 5l7 7-7 7"/></svg>
+            </a>
+            <a href="#" className="group bg-white text-slate-900 px-8 py-3 rounded-xl font-black uppercase tracking-widest text-[10px] hover:bg-slate-100 hover:-translate-y-1 transition-all shadow-xl flex items-center gap-2">
+              <svg className="w-4 h-4 text-primary-600 group-hover:scale-125 transition-transform" fill="currentColor" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+              Donate Now
+            </a>
+          </div>
+        </div>
+
+        <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-12 mb-16">
           
-          {/* Branding & Mission */}
-          <div className="col-span-2 reveal -translate-x-10">
-            <div className="flex items-center gap-5 mb-10 group cursor-pointer">
-              <div className="w-20 h-20 bg-primary-600 rounded-[2rem] flex items-center justify-center text-white font-black text-4xl shadow-[0_20px_40px_rgba(37,99,235,0.3)] transition-all duration-500 group-hover:rotate-[15deg] group-hover:scale-110">CB</div>
-              <span className="font-display font-black text-white text-5xl tracking-tighter uppercase leading-none">
-                CityBridge<br /><span className="text-primary-600 font-light italic">Urban</span>
+          {/* Branding */}
+          <div className="col-span-2 reveal stagger-1">
+            <div className="flex items-center gap-4 mb-6 group cursor-pointer">
+              <div className="w-12 h-12 bg-primary-600 rounded-xl flex items-center justify-center text-white font-black text-xl shadow-lg transition-all group-hover:rotate-6 group-hover:scale-110">UM</div>
+              <span className="font-display font-black text-white text-2xl tracking-tighter uppercase leading-none">
+                Urban<br /><span className="text-primary-600 font-light italic">Ministry</span>
               </span>
             </div>
-            <p className="text-3xl leading-relaxed max-w-lg mb-12 text-slate-100 font-light italic opacity-90">
-              "Connecting urban potential with infinite possibilities through faith and innovation."
+            <p className="text-lg leading-relaxed max-w-sm mb-8 text-slate-100 font-light italic opacity-80">
+              "Connecting urban potential with infinite possibilities through faith and creative innovation."
             </p>
             
-            {/* Social Media Icons */}
-            <div className="flex gap-4">
-              {[
-                { name: 'Instagram', path: 'M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z' },
-                { name: 'Facebook', path: 'M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z' },
-                { name: 'YouTube', path: 'M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z' },
-                { name: 'LinkedIn', path: 'M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z' }
-              ].map((s) => (
+            {/* Social Icons - Enhanced with specific brand animations */}
+            <div className="flex gap-3">
+              {socialLinks.map((s) => (
                 <a 
                   key={s.name} 
                   href="#" 
-                  className="w-16 h-16 rounded-2xl bg-white/5 backdrop-blur-md border border-white/10 flex items-center justify-center text-slate-300 hover:bg-primary-600 hover:text-white transition-all duration-500 hover:-translate-y-2 group shadow-lg"
+                  className={`w-10 h-10 rounded-xl bg-white/5 backdrop-blur-md border border-white/10 flex items-center justify-center text-slate-300 transition-all duration-500 hover:-translate-y-2 hover:rotate-12 shadow-md group ${s.hoverClass}`}
                   title={s.name}
                 >
-                  <svg className="w-6 h-6 fill-current transition-transform group-hover:scale-125" viewBox="0 0 24 24">
+                  <svg className="w-5 h-5 fill-current transition-transform duration-300 group-hover:scale-125" viewBox="0 0 24 24">
                     <path d={s.path} />
                   </svg>
                 </a>
@@ -51,59 +81,43 @@ const Footer: React.FC = () => {
             </div>
           </div>
           
-          {/* Quick Navigation Links */}
-          <div className="reveal translate-y-10 [animation-delay:200ms]">
-            <h5 className="text-white font-black mb-12 uppercase tracking-[0.5em] text-xs opacity-60">Directory</h5>
-            <ul className="space-y-8 font-bold text-lg">
-              <li><a href="#" className="text-slate-400 hover:text-primary-400 transition-all uppercase tracking-widest block transform hover:translate-x-3 duration-300">Base Camp</a></li>
-              <li><a href="/#connection" className="text-slate-400 hover:text-primary-400 transition-all uppercase tracking-widest block transform hover:translate-x-3 duration-300">Network Hub</a></li>
-              <li><a href="/#programs" className="text-slate-400 hover:text-primary-400 transition-all uppercase tracking-widest block transform hover:translate-x-3 duration-300">Programmes</a></li>
-              <li><a href="/#impact" className="text-slate-400 hover:text-primary-400 transition-all uppercase tracking-widest block transform hover:translate-x-3 duration-300">Impact Data</a></li>
-              <li><a href="/#partner" className="text-slate-400 hover:text-primary-400 transition-all uppercase tracking-widest block transform hover:translate-x-3 duration-300">Partner Portal</a></li>
+          {/* Quick Links */}
+          <div className="reveal stagger-2">
+            <h5 className="text-white font-black mb-8 uppercase tracking-[0.4em] text-[8px] opacity-60">Directory</h5>
+            <ul className="space-y-4 font-bold text-sm">
+              <li><a href="#" className="text-slate-400 hover:text-primary-400 transition-all uppercase tracking-widest block transform hover:translate-x-2 duration-300">Base Camp</a></li>
+              <li><a href="/#programs" className="text-slate-400 hover:text-primary-400 transition-all uppercase tracking-widest block transform hover:translate-x-2 duration-300">Programmes</a></li>
+              <li><a href="/#team" className="text-slate-400 hover:text-primary-400 transition-all uppercase tracking-widest block transform hover:translate-x-2 duration-300">Our Team</a></li>
+              <li><a href="/#partner" className="text-slate-400 hover:text-primary-400 transition-all uppercase tracking-widest block transform hover:translate-x-2 duration-300">Partner Portal</a></li>
             </ul>
           </div>
 
-          {/* Direct Contact Info */}
-          <div className="reveal translate-y-10 [animation-delay:400ms]">
-            <h5 className="text-white font-black mb-12 uppercase tracking-[0.5em] text-xs opacity-60">Global Comms</h5>
-            <div className="space-y-10">
-              <div className="flex items-start gap-6 group">
-                <div className="w-14 h-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center flex-shrink-0 text-primary-500 group-hover:bg-primary-600 group-hover:text-white transition-all duration-500 shadow-xl">
-                  <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/></svg>
+          {/* Contact */}
+          <div className="reveal stagger-3">
+            <h5 className="text-white font-black mb-8 uppercase tracking-[0.4em] text-[8px] opacity-60">Contact</h5>
+            <div className="space-y-6">
+              <div className="flex items-start gap-4 group">
+                <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center flex-shrink-0 text-primary-500 group-hover:bg-primary-600 group-hover:text-white transition-all shadow-lg group-hover:scale-110 group-hover:rotate-3">
+                  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                    <circle cx="12" cy="11" r="3" stroke="currentColor" />
+                  </svg>
                 </div>
-                <div className="pt-1">
-                  <span className="block font-black text-white uppercase tracking-[0.3em] text-[10px] mb-2 opacity-50">Headquarters</span>
-                  <p className="text-slate-300 text-lg font-medium leading-relaxed group-hover:text-white transition-colors">Urban Ministry District<br />Kandisi, Kenya</p>
-                </div>
+                <p className="text-slate-300 text-sm leading-relaxed pt-1 group-hover:text-white transition-colors">Urban District<br />Kandisi, Kenya</p>
               </div>
-              <a href="mailto:info@citybridgeurban.org" className="flex items-start gap-6 group">
-                <div className="w-14 h-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center flex-shrink-0 text-primary-500 group-hover:bg-primary-600 group-hover:text-white transition-all duration-500 shadow-xl">
-                  <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-                </div>
-                <div className="pt-1">
-                  <span className="block font-black text-white uppercase tracking-[0.3em] text-[10px] mb-2 opacity-50">Email Dispatch</span>
-                  <p className="text-slate-300 text-lg font-medium group-hover:text-primary-400 transition-all border-b border-transparent group-hover:border-primary-400 pb-1">info@citybridgeurban.org</p>
-                </div>
-              </a>
             </div>
           </div>
         </div>
         
-        {/* Sub-Footer / Copyright */}
-        <div className="pt-20 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-10 reveal">
-          <div className="text-[10px] uppercase tracking-[0.6em] font-black text-slate-500 hover:text-slate-300 transition-colors cursor-default">
-            &copy; {new Date().getFullYear()} CityBridge Urban Center • Global Ministry Network
-          </div>
-          <div className="flex gap-12 text-[10px] font-black uppercase tracking-[0.4em] text-slate-600">
-            <a href="#" className="hover:text-primary-500 transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-primary-500 transition-colors">Terms of Service</a>
-            <a href="#" className="hover:text-primary-500 transition-colors">Artist Rights</a>
+        {/* Sub-Footer */}
+        <div className="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6 reveal">
+          <div className="text-[8px] uppercase tracking-[0.5em] font-black text-slate-600">
+            &copy; {new Date().getFullYear()} Urban Ministry Center • All Rights Reserved
           </div>
         </div>
       </div>
       
-      {/* Bottom Decorative Bar */}
-      <div className="h-2 w-full bg-gradient-to-r from-accent-yellow via-primary-600 to-accent-teal"></div>
+      <div className="h-1 w-full bg-gradient-to-r from-accent-yellow via-primary-600 to-accent-teal"></div>
     </footer>
   );
 };
