@@ -1,128 +1,275 @@
 
 import { Program, Ministry, TeamMember } from './types';
 
+export interface GalleryItem {
+  url: string;
+  label: string;
+}
+
 export interface DetailedProgram extends Program {
   longDescription: string;
   schedule?: string;
   impactStory?: string;
   tags: string[];
-  gallery: string[];
+  gallery: GalleryItem[];
   mainImage: string;
+  hoverImage: string;
 }
+
+export const BIBLE_VERSES = [
+  {
+    text: "For I know the plans I have for you, declares the Lord, plans for welfare and not for evil, to give you a future and a hope.",
+    reference: "Jeremiah 29:11",
+    theme: "Hope"
+  },
+  {
+    text: "Whatever you do, work heartily, as for the Lord and not for men.",
+    reference: "Colossians 3:23",
+    theme: "Mastery"
+  },
+  {
+    text: "Let your light so shine before men, that they may see your good works, and glorify your Father which is in heaven.",
+    reference: "Matthew 5:16",
+    theme: "Creativity"
+  },
+  {
+    text: "They shall build up the ancient ruins; they shall raise up the former devastations; they shall repair the ruined cities.",
+    reference: "Isaiah 61:4",
+    theme: "Restoration"
+  }
+];
 
 export const MINISTRIES: Ministry[] = [
   {
-    name: "Fountain of Hope",
+    name: "Fountain of Hope Church of the Nazarene",
     leader: "Pastor Roy Mugambi",
     location: "Kandisi, Kenya",
-    mission: "Building faith and community restoration from the ground up.",
-    connection: "The spiritual birthplace of our urban mission."
+    mission: "Building faith and community restoration through discipleship and compassion.",
+    connection: "The spiritual lead and foundation of our community bond."
   },
   {
-    name: "Urban Ministry Center",
+    name: "CityBridge Urban Center",
     leader: "Keith Tadiwanashe Manokore",
-    mission: "A hub for youth leadership, creative arts, and city innovation.",
-    connection: "Our central studio for urban transformation."
-  },
-  {
-    name: "Crib Connection",
-    leader: "Caleb Magaya & Keith Manokore",
-    mission: "Empowering young creators to start sustainable businesses.",
-    connection: "The entrepreneurial arm of our ministry."
+    mission: "A dedicated hub for community leadership, creative arts, and urban transformation.",
+    connection: "Our central platform for change and empowerment."
   }
 ];
 
 export const TEAM_MEMBERS: TeamMember[] = [
   {
     name: "Pastor Roy Mugambi",
-    role: "Founding Visionary",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=800",
-    bio: "Roy's heart is for the people of Kandisi, leading with a vision of restoration through proximity.",
-    specialty: "Guidance"
+    role: "Lead Pastor of Fountain of Hope Church of the Nazarene",
+    image: "/assets/proy.jpeg",
+    bio: "Pastor Roy leads Fountain of Hope with a mission to bridge the gap between church and community through home visits, prayer, and food hampers.",
+    specialty: "Spiritual Leadership"
   },
   {
-    name: "Keith Manokore",
-    role: "Lead Strategist & Co-founder of Crib Connection",
-    image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&q=80&w=800",
-    bio: "Keith designs the systems that connect faith with city life and co-leads the creative entrepreneurial movement.",
-    specialty: "Urban Design"
+    name: "Keith Tadiwanashe Manokore",
+    role: "Leader of CityBridge & Co-founder of Crib Connection",
+    image: "/assets/TADI.jpeg",
+    bio: "Keith leads CityBridge Urban Center and co-founded Crib Connection, focusing on urban strategy and creative community growth.",
+    specialty: "Urban Strategy & Leadership"
   },
   {
     name: "Caleb Magaya",
-    role: "Project Director & Co-founder of Crib Connection",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=800",
-    bio: "Caleb mentors youth daily, transforming raw talent into sustainable business ventures through the Crib network.",
-    specialty: "Youth Coaching"
+    role: "Co-founder of Crib Connection",
+    image: "assets/magaya.jpeg",
+    bio: "Caleb is the co-founder of Crib Connection, leading creative studio initiatives and mentoring talent in professional arts.",
+    specialty: "Creative Studio Direction"
+  }
+];
+
+export const CRIB_TEAM = [
+  {
+    name: "Wesley",
+    role: "Creative Strategist & Mentor",
+    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=800",
+    hoverImage: "https://images.unsplash.com/photo-1488161628813-04466f872be2?auto=format&fit=crop&q=80&w=800",
+    bio: "Wesley crafts the strategic vision for our creative mastery tracks, ensuring every project aligns with community restoration."
+  },
+  {
+    name: "Tadiwanashe",
+    role: "Co-founder & Urban Visionary",
+    image: "/assets/TADI.jpeg",
+    hoverImage: "https://images.unsplash.com/photo-1534030347209-467a5b0ad3e6?auto=format&fit=crop&q=80&w=800",
+    bio: "Keith Tadiwanashe bridges the gap between urban strategy and ground-level action in Kandisi."
+  },
+  {
+    name: "Caleb",
+    role: "Co-founder & Creative Director",
+    image: "assets/magaya.jpeg",
+    hoverImage: "https://images.unsplash.com/photo-1492562080023-ab3dbdf5bbbb?auto=format&fit=crop&q=80&w=800",
+    bio: "Caleb leads the studio production and technical mastery tracks at the Crib."
+  },
+  {
+    name: "Mitchelina",
+    role: "Tresurer",
+    image: "/assets/cohort4.jpg",
+    hoverImage: "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&q=80&w=800",
+    bio: "Naomi designs the interactive classroom experiences and manages community pulse and culture."
+  },
+  {
+    name: "Dabasa",
+    role: "Technical Lead & Audio Engineer",
+    image: "/assets/dabasa.jpg",
+    hoverImage: "https://images.unsplash.com/photo-1506803682981-6e718a9dd3ee?auto=format&fit=crop&q=80&w=800",
+    bio: "Dabasa manages our high-end audio production and mentors sound engineering participants."
+  },
+  {
+    name: "Naomi",
+    role: "Experience Designer & Community Coordinator",
+    image: "/assets/naomi.jpg",
+    hoverImage: "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&q=80&w=800",
+    bio: "Naomi designs the interactive classroom experiences and manages community pulse and culture."
+  }
+
+];
+
+export const CRIB_VOLUNTEERS = [
+  {
+    name: "Ushe",
+    role: "Media Volunteer",
+    image: "/assets/ushe.jpg",
+    bio: "Ushe supports our media production and visual storytelling during live events."
+  },
+  {
+    name: "Keffar",
+    role: "Studio Support Volunteer",
+    image: "https://images.unsplash.com/photo-1501196354995-cbb51c65aaea?auto=format&fit=crop&q=80&w=800",
+    bio: "Keffar ensures the studio environment is always ready for creative action and skill exchange."
   }
 ];
 
 export const PROGRAMS: DetailedProgram[] = [
   {
-    id: 'communities',
-    title: "House to House Hubs",
-    description: "Meeting in homes to build real family and local peace where people live.",
-    mainImage: "https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&q=80&w=1600",
-    longDescription: "Restoration isn't just about a building; it's about being present. Our 'House to House' movement brings neighbors together for meals, prayer, and local support. We turn streets into families, one living room at a time.",
-    schedule: "Weekly Home Gatherings",
-    impactStory: "Neighbors who were once strangers now share meals and support each other's families through our home hubs.",
+    id: 'home-visits',
+    title: "Home Visits",
+    description: "Building close bond relationships through prayer and food hampers.",
+    mainImage: "/assets/home1.jpg",
+    hoverImage: "/assets/home2.jpg",
+    longDescription: "Our Home Visits movement brings prayers and food hampers to each family visited, turning distance between the church and community into a close bond relationship. We focus on building deep relationships through consistent presence and compassionate support.",
+    schedule: "WEEKEND SCHEDULE",
+    impactStory: "Turning physical distance into spiritual and community closeness through consistent weekend visitation.",
     icon: "Home",
-    tags: ["Presence", "Family", "Local"],
-    details: ["Home dinner groups", "Neighbor-to-neighbor care", "Street-level prayer"],
+    tags: ["Prayer", "Compassion", "Community Bond"],
+    details: ["Prayer support", "Food hampers", "Relationship building"],
     gallery: [
-      "https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&q=80&w=1200",
-      "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&q=80&w=1200",
-      "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&q=80&w=1200"
+      { url: "/assets/home3.jpg", label: "Saturday Prayer Walk" },
+      { url: "/assets/home4.jpg", label: "Weekend Hamper Delivery" },
+      { url: "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&q=80&w=1200", label: "Sunday Fellowship Bonds" },
+      { url: "https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&q=80&w=1200", label: "Frontline Compassion" },
+      { url: "/assets/home5.jpg", label: "Home Connection Log" },
+      { url: "https://images.unsplash.com/photo-1526676037777-05a232554f77?auto=format&fit=crop&q=80&w=1200", label: "Weekend Reachout" }
     ]
   },
   {
-    id: 'youth',
+    id: 'next-gen',
     title: "Next Gen Mentors",
-    description: "Coaching youth to lead with character and hope in our city.",
-    mainImage: "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&q=80&w=1600",
-    longDescription: "We believe in the untapped potential of every young person. Through intentional coaching and creative projects, we help students discover their identity and lead with values that transform our community.",
-    schedule: "Saturday Leadership Lab",
-    impactStory: "Local students who struggled are now leading community service projects and mentoring younger peers.",
+    description: "Promoting discipleship, compassion, and hope in our community youth.",
+    mainImage: "/assets/gen2.jpg",
+    hoverImage: "/assets/gen1.jpg",
+    longDescription: "Our mentorship program focuses on coaching the next generation to lead with integrity, discovering their potential through discipleship and hope. We provide a steady weekend guidance system for young leaders.",
+    schedule: "WEEKEND SCHEDULE",
+    impactStory: "Youth are finding direction and spiritual grounding through consistent weekend mentorship sessions.",
     icon: "Users",
-    tags: ["Youth", "Leadership", "Character"],
-    details: ["Direct mentoring", "Values-based training", "Leadership games"],
+    tags: ["Discipleship", "Hope", "Mentorship"],
+    details: ["Values coaching", "Character development", "Spiritual grounding"],
     gallery: [
-      "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&q=80&w=1200",
-      "https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&q=80&w=1200",
-      "https://images.unsplash.com/photo-1489710437720-ebb67ec84dd2?auto=format&fit=crop&q=80&w=1200"
+      { url: "/assets/gen3.jpg", label: "Saturday Discovery Session" },
+      { url: "/assets/gen4.jpg", label: "Weekend Pathfinding" },
+      { url: "/assets/gen5.jpg", label: "Sunday Spiritual Coaching" },
+      { url: "/assets/gen3.jpg", label: "Mastery Mindset" },
+      { url: "/assets/gen7.jpg", label: "Weekend Impact Log" },
+      { url: "/assets/gen1.jpg", label: "Future Architects" }
     ]
   },
   {
-    id: 'incubation',
+    id: 'skill-launchpad',
     title: "Skill Launchpad",
-    description: "Mastering crafts and launching businesses that last.",
-    mainImage: "https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&q=80&w=1600",
-    longDescription: "We provide the tools and space for innovation. From carpentry to digital tech, we help neighbors master a craft and build businesses that provide economic dignity for themselves and others.",
-    schedule: "Daily Studio Access",
-    impactStory: "Three independent shops have launched from our studio this year, creating five new jobs in our district.",
+    description: "Helping community business owners grow and expand through creative mastery.",
+    mainImage: "/assets/skill1.jpg",
+    hoverImage: "/assets/skill2.jpg",
+    longDescription: "The Skill Launchpad is designed to help community business owners grow and scale. We provide platforms for expansion through mastery of music, painting, string art, and other creative disciplines. Our focus is on skill exchange and growth, not a tool library.",
+    schedule: "WEEKEND SCHEDULE",
+    impactStory: "Local entrepreneurs are scaling their businesses by integrating high-end creative skills into their daily operations.",
     icon: "Rocket",
-    tags: ["Skills", "Jobs", "Innovation"],
-    details: ["Craft workshops", "Business coaching", "Studio tool library"],
+    tags: ["Music", "Painting", "String Art", "Growth"],
+    details: ["Music Production", "Fine Painting", "String Art Mastery"],
     gallery: [
-      "https://images.unsplash.com/photo-1520127877037-33100693a778?auto=format&fit=crop&q=80&w=1200",
-      "https://images.unsplash.com/photo-1459749411177-eb8226922997?auto=format&fit=crop&q=80&w=1200",
-      "https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=1200"
+      { url: "/assets/skill2.jpg", label: "Saturday Studio Grind" },
+      { url: "/assets/skill4.jpg", label: "Weekend Creative Flow" },
+      { url: "/assets/skill5.jpg", label: "Sunday Mastery Lab" },
+      { url: "/assets/skill1.jpg", label: "The Economic Engine" },
+      { url: "/assets/skill8.jpg", label: "Skill Exchange Log" },
+      { url: "/assets/skill2.jpg", label: "Weekend Launchpad" }
     ]
+  }
+];
+
+export const CRIB_PROGRAMS = [
+  {
+    id: 'skill-exchange',
+    title: "Skill Exchange",
+    desc: "A collaborative network where founders and community members trade techniques in film, audio, and visual design.",
+    icon: "🔄",
+    image: "/assets/ex1.JPG",
+    hoverImage: "/assets/ex2.jpg"
   },
   {
-    id: 'arts',
-    title: "Creative Story Lab",
-    description: "Using media and design to share the true voice of the city.",
-    mainImage: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=1600",
-    longDescription: "The city has a story, and it's full of hope. We train youth in photography, video, and graphic design so they can capture the beauty and truth of our urban life for the world to see.",
-    schedule: "Tue & Thu Creative Studio",
-    impactStory: "A student-led documentary about our neighborhood was screened locally, changing perceptions of our district.",
-    icon: "Camera",
-    tags: ["Arts", "Media", "Digital"],
-    details: ["Camera training", "Graphic design", "Digital storytelling"],
-    gallery: [
-      "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&q=80&w=1200",
-      "https://images.unsplash.com/photo-1542038784456-1ea8e935640e?auto=format&fit=crop&q=80&w=1200",
-      "https://images.unsplash.com/photo-1520333789090-1afc82db536a?auto=format&fit=crop&q=80&w=1200"
+    id: 'game-nights',
+    title: "Friday Game Nights",
+    desc: "Vibrant evenings of laughter and strategy, building a deep community culture beyond the studio work.",
+    icon: "🎲",
+    image: "/assets/gamenight1.JPG",
+    hoverImage: "/assets/gamenight2.JPG"
+  },
+  {
+    id: 'classroom-cohorts',
+    title: "Classroom Cohorts",
+    desc: "Intensive training modules celebrating the completion of professional creative tracks.",
+    icon: "🎓",
+    image: "/assets/croom.jpg",
+    hoverImage: "/assets/croom2.jpg"
+  }
+];
+
+export const CRIB_COHORTS = [
+  {
+    number: "Cohort 1",
+    dates: "June 21st – November 23rd, 2025",
+    highlight: "Journey to Completion",
+    details: "12 participants came together to explore the intersections of faith and creative mastery, completing the first full curriculum in Kandisi.",
+    status: "Completed",
+    certificationType: "Certificate of Completion",
+    visualHighlights: [
+      {
+        url: "/assets/cohort1.jpg",
+        caption: "The Journey Begins: Our first gathering at the Connection hub, laying the foundation of brotherhood and vision."
+      },
+      {
+        url: "/assets/cohort2.jpg",
+        caption: "Classroom Mastery: Diving deep into the theory of creative design, where faith principles meet professional standards."
+      },
+      {
+        url: "/assets/cohort3.jpg",
+        caption: "Hands-on Production: Participants collaborating in the studio, turning abstract ideas into community-focused media."
+      },
+      {
+        url: "/assets/cohort4.jpg",
+        caption: "Final Milestones: Celebrating the completion of the legacy track, where 12 individuals became urban change agents."
+      }
+    ],
+    stories: [
+      {
+        name: "Samuel K.",
+        role: "Audio Team",
+        quote: "The Crib gave me a space to refine my rhythm and connect with a brotherhood that cares about more than just the music."
+      },
+      {
+        name: "Faith M.",
+        role: "Visual Team",
+        quote: "Learning to tell our community's stories through film has given me a new lens of hope and dignity."
+      }
     ]
   }
 ];
