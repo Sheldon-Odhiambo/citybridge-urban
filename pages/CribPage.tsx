@@ -6,9 +6,9 @@ import FloatingBlobs from '../components/FloatingBlobs';
 import { CRIB_PROGRAMS, CRIB_COHORTS, MINISTRIES, CRIB_TEAM } from '../constants';
 
 const HERO_SLIDES = [
-  "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&q=80&w=2000",
-  "https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&q=80&w=2000",
-  "https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&q=80&w=2000",
+  "/assets/BACK4.jpg",
+  "/assets/BACK2.jpg",
+  "/assets/cohort4.jpg",
   "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&q=80&w=2000"
 ];
 
