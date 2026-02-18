@@ -6,7 +6,7 @@ import FloatingBlobs from '../components/FloatingBlobs';
 import { CRIB_PROGRAMS, CRIB_COHORTS, MINISTRIES, CRIB_TEAM, CRIB_VOLUNTEERS } from '../constants';
 
 const HERO_SLIDES = [
-  "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&q=80&w=2000",
+  "/assets/BACK4.jpg",
   "https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&q=80&w=2000",
   "https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&q=80&w=2000",
   "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&q=80&w=2000"
@@ -15,7 +15,7 @@ const HERO_SLIDES = [
 const TESTIMONIAL_VIDEOS = [
   {
     id: 1,
-    name: "Samuel K.",
+    name: "Felix Kephar.",
     cohort: "Cohort 1",
     title: "Finding My Rhythm",
     thumbnail: "https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&q=80&w=800",
@@ -116,7 +116,7 @@ const CribPage: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 text-center relative z-20">
           <div className="reveal active">
             <div className="inline-block mb-10 px-8 py-2.5 bg-white/10 backdrop-blur-3xl border border-white/20 rounded-full shadow-[0_8px_32px_rgba(255,255,255,0.1)]">
-              <span className="text-white text-[11px] font-black uppercase tracking-[0.6em] animate-pulse">The Creative Hub</span>
+              <span className="text-white text-[11px] font-black uppercase tracking-[0.6em] animate-pulse">The Creative Space</span>
             </div>
             <h1 className="font-display font-black text-6xl md:text-8xl lg:text-9xl mb-10 uppercase tracking-tighter leading-[0.82] drop-shadow-2xl">
               <span className="text-transparent [-webkit-text-stroke:1px_white] md:[-webkit-text-stroke:2px_white]">CRIB</span> <br />

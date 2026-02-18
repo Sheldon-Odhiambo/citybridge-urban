@@ -9,7 +9,7 @@ import { PROGRAMS, TEAM_MEMBERS } from '../constants';
 const STRATEGY_PILLARS = [
   { 
     id: 'home-visits',
-    title: "Home Visits", 
+    title: "Missional Communities", 
     desc: "Bringing prayers and food hampers to each family, turning distance into close bond relationships.",
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -45,7 +45,7 @@ const STRATEGY_PILLARS = [
   },
   { 
     id: 'professional',
-    title: "Marketplace Leadership", 
+    title: "Young Professionals cohort", 
     desc: "Mentorship programs that connect faith values with professional excellence in the marketplace.",
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -57,7 +57,7 @@ const STRATEGY_PILLARS = [
   },
   { 
     id: 'skill-launchpad',
-    title: "Skill Launchpad", 
+    title: "Entrepreneurship Incubation", 
     desc: "Helping business owners expand through music, painting, and string art mastery.",
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -69,7 +69,7 @@ const STRATEGY_PILLARS = [
   },
   { 
     id: 'crib',
-    title: "Creative Arts", 
+    title: "Art and Media", 
     desc: "Mastering media and arts at Crib Connection to share the true voice of the community.",
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -148,7 +148,7 @@ const HomePage: React.FC = () => {
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 py-20">
           <div className="inline-block mb-10 px-6 py-2 bg-white/10 backdrop-blur-xl border border-white/20 rounded-full animate-pulse-soft">
-            <span className="text-accent-yellow text-[10px] font-black uppercase tracking-[0.5em] drop-shadow-md">Faith • Work • Hope</span>
+            <span className="text-accent-yellow text-[10px] font-black uppercase tracking-[0.5em] drop-shadow-md">Faith • Work • Discipleship</span>
           </div>
           
           <h1 className="font-display font-black text-5xl md:text-7xl lg:text-8xl mb-8 leading-[0.85] uppercase tracking-tighter drop-shadow-2xl animate-fade-in-up">
@@ -183,7 +183,7 @@ const HomePage: React.FC = () => {
           <div className="text-center mb-24 reveal">
             <h2 className="text-accent-yellow text-[10px] font-black uppercase tracking-[1em] mb-4">Core Strategy</h2>
             <h3 className="font-display text-5xl md:text-7xl font-black text-white uppercase tracking-tighter leading-none mb-4">
-              <span className="text-transparent [-webkit-text-stroke:1px_white] md:[-webkit-text-stroke:2px_white]">Restoration</span> <span className="text-primary-500 italic">DNA</span>
+              <span className="text-transparent [-webkit-text-stroke:1px_white] md:[-webkit-text-stroke:2px_white]">Urban</span> <span className="text-primary-500 italic">DNA</span>
             </h3>
             <p className="text-slate-400 text-sm md:text-base uppercase tracking-[0.4em] font-light max-w-2xl mx-auto leading-relaxed">Centres of Influence radiating restoration from the studio to the home.</p>
           </div>

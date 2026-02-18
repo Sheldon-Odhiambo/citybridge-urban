@@ -19,7 +19,7 @@ const Footer: React.FC = () => {
     <footer className="relative min-h-[600px] bg-slate-950 text-slate-400 overflow-hidden flex flex-col justify-end">
       <div 
         className="absolute inset-0 bg-fixed bg-cover bg-center pointer-events-none opacity-20"
-        style={{ backgroundImage: `url('https://images.unsplash.com/photo-1449824913935-59a10b8d2000?auto=format&fit=crop&q=80&w=2500')` }}
+        style={{ backgroundImage: `url('/assets/BACK4.jpg')` }}
       ></div>
       
       <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/90 to-transparent"></div>
