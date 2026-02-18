@@ -36,6 +36,11 @@ export const BIBLE_VERSES = [
     text: "They shall build up the ancient ruins; they shall raise up the former devastations; they shall repair the ruined cities.",
     reference: "Isaiah 61:4",
     theme: "Restoration"
+  },
+   {
+    text: "Be watchful, stand firm in the faith, act like men, be strong.",
+    reference: "1 corinthians 16:13",
+    theme: "Steadfastness"
   }
 ];
 
