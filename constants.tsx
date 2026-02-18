@@ -138,7 +138,7 @@ export const CRIB_VOLUNTEERS = [
     bio: "Joy serves as a volunteer in the kids programme, supporting activities and creating a warm, welcoming environment where children feel valued and encouraged."
   },
   {
-    name: "Felix Kephar",
+    name: "Felix Kepha",
     role: "Junior Arts Mentor",
     image: "https://images.unsplash.com/photo-1501196354995-cbb51c65aaea?auto=format&fit=crop&q=80&w=800",
     bio: "Kepha volunteers in the kids programme, assisting with activities and helping nurture positive growth and creativity among the children."
