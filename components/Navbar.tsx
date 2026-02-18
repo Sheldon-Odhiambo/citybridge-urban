@@ -40,8 +40,8 @@ const Navbar: React.FC = () => {
   return (
     <nav 
       className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-500 ${
-        scrolled 
-          ? 'bg-white/95 backdrop-blur-xl border-b border-slate-200 py-3 shadow-lg' 
+        scrolled || isOpen
+          ? 'bg-white shadow-lg py-3' 
           : 'bg-transparent py-6'
       }`}
     >
@@ -51,10 +51,10 @@ const Navbar: React.FC = () => {
             <Link 
               to="/" 
               onClick={(e) => handleLinkClick(e, '/')}
-              className="flex-shrink-0 flex items-center gap-3 group cursor-pointer"
+              className="flex-shrink-0 flex items-center gap-2 md:gap-3 group cursor-pointer"
             >
-              <div className="w-10 h-10 bg-primary-600 rounded-xl flex items-center justify-center text-white font-black text-xl shadow-lg transition-transform group-hover:rotate-12">CB</div>
-              <span className={`font-display font-black text-xl tracking-tighter uppercase transition-colors ${scrolled ? 'text-slate-900' : 'text-white'}`}>
+              <div className="w-8 h-8 md:w-10 md:h-10 bg-primary-600 rounded-lg md:rounded-xl flex items-center justify-center text-white font-black text-base md:text-xl shadow-lg transition-transform group-hover:rotate-12">CB</div>
+              <span className={`font-display font-black text-sm md:text-xl tracking-tighter uppercase transition-colors ${scrolled || isOpen ? 'text-slate-900' : 'text-white'}`}>
                 CityBridge <span className="text-primary-600 font-light italic">Urban Center</span>
               </span>
             </Link>
@@ -67,7 +67,7 @@ const Navbar: React.FC = () => {
                 to={link.href}
                 onClick={(e) => handleLinkClick(e, link.href)}
                 className={`text-[9px] font-black uppercase tracking-widest transition-all hover:text-primary-500 relative group ${
-                  scrolled ? 'text-slate-600' : 'text-slate-100'
+                  scrolled || isOpen ? 'text-slate-600' : 'text-slate-100'
                 }`}
               >
                 {link.name}
@@ -82,18 +82,13 @@ const Navbar: React.FC = () => {
             </a>
           </div>
 
-          <div className="md:hidden flex items-center gap-4">
-             <a 
-              href="mailto:partner@citybridgeurban.org?subject=Partnership%20Inquiry"
-              className="bg-primary-600 text-white px-4 py-2 rounded-full font-black uppercase tracking-widest text-[8px] shadow-lg"
-            >
-              Partner
-            </a>
+          <div className="md:hidden flex items-center">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className={`${scrolled ? 'text-slate-900' : 'text-white'} p-2 rounded-xl transition-colors`}
+              className={`${scrolled || isOpen ? 'text-slate-900' : 'text-white'} p-2 rounded-xl transition-colors`}
+              aria-label="Toggle Menu"
             >
-              <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg className="h-6 w-6 md:h-7 md:w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 {isOpen ? (
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                 ) : (
@@ -105,28 +100,31 @@ const Navbar: React.FC = () => {
         </div>
       </div>
 
+      {/* Mobile Drawer */}
       <div 
         className={`md:hidden absolute top-full left-0 right-0 bg-white transition-all duration-300 overflow-hidden ${
-          isOpen ? 'max-h-screen opacity-100 shadow-2xl' : 'max-h-0 opacity-0'
+          isOpen ? 'max-h-screen opacity-100 shadow-2xl border-t border-slate-100' : 'max-h-0 opacity-0'
         }`}
       >
-        <div className="px-4 py-10 space-y-6 text-center bg-white/95 backdrop-blur-xl">
+        <div className="px-4 py-16 space-y-10 text-center bg-white/95 backdrop-blur-xl">
           {navLinks.map((link) => (
             <Link
               key={link.name}
               to={link.href}
               onClick={(e) => handleLinkClick(e, link.href)}
-              className="block text-slate-900 text-xl font-black uppercase tracking-tighter"
+              className="block text-slate-900 text-xs font-black uppercase tracking-[0.4em] hover:text-primary-600 transition-colors"
             >
               {link.name}
             </Link>
           ))}
-          <a 
-            href="mailto:partner@citybridgeurban.org?subject=Partnership%20Inquiry"
-            className="inline-block bg-primary-600 text-white px-10 py-4 rounded-2xl font-black uppercase tracking-widest text-xs shadow-xl"
-          >
-            Partner with Us
-          </a>
+          <div className="pt-6">
+            <a 
+              href="mailto:partner@citybridgeurban.org?subject=Partnership%20Inquiry"
+              className="inline-block bg-primary-600 text-white px-10 py-4 rounded-full font-black uppercase tracking-widest text-[10px] shadow-xl hover:bg-primary-500 transition-all active:scale-95"
+            >
+              Partner with Us
+            </a>
+          </div>
         </div>
       </div>
     </nav>
