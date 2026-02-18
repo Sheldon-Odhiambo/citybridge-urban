@@ -4,7 +4,7 @@ import { useParams, Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import FloatingBlobs from '../components/FloatingBlobs';
-import { PROGRAMS } from '../constants';
+import { PROGRAMS, CRIB_VOLUNTEERS } from '../constants';
 
 const ProgramPage: React.FC = () => {
   const { id } = useParams<{ id: string }>();
@@ -147,6 +147,45 @@ const ProgramPage: React.FC = () => {
           </div>
         </div>
       </section>
+
+      {/* Conditional Volunteer Section for Next Gen Mentors */}
+      {id === 'next-gen' && (
+        <section className="py-32 bg-slate-900 relative overflow-hidden">
+          <div className="absolute top-0 right-0 p-16 pointer-events-none z-0 opacity-10">
+              <svg 
+                className="w-64 h-64 text-rose-500 animate-heartbeat" 
+                fill="currentColor" 
+                viewBox="0 0 24 24"
+              >
+                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+              </svg>
+          </div>
+          <div className="max-w-7xl mx-auto px-4 relative z-10">
+            <div className="text-center mb-24 reveal">
+               <h2 className="text-primary-500 text-[10px] font-black uppercase tracking-[1em] mb-6">Support Network</h2>
+               <h4 className="text-white font-display font-black text-5xl md:text-8xl uppercase tracking-tighter mb-4 leading-none">
+                 <span className="text-transparent [-webkit-text-stroke:1px_white] md:[-webkit-text-stroke:2px_white]">Our</span> <span className="text-primary-500 italic">Volunteers.</span>
+               </h4>
+               <p className="text-slate-400 text-[10px] uppercase tracking-[0.6em] font-black">Next Gen Mentorship <span className="text-rose-500 animate-pulse mx-2">♥</span> Human Infrastructure</p>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+              {CRIB_VOLUNTEERS.map((v, i) => (
+                <div key={i} className="flex flex-col md:flex-row items-center gap-10 bg-white/5 backdrop-blur-xl p-10 rounded-[4rem] border border-white/10 group hover:bg-white/10 transition-all duration-500">
+                  <div className="w-32 h-32 rounded-full overflow-hidden flex-shrink-0 border-4 border-primary-500/30 group-hover:border-primary-500 group-hover:scale-105 transition-all duration-500">
+                     <img src={v.image} className="w-full h-full object-cover" alt={v.name} />
+                  </div>
+                  <div>
+                    <h5 className="text-white font-display font-black text-2xl uppercase tracking-tighter mb-1">{v.name}</h5>
+                    <p className="text-primary-400 text-[10px] font-black uppercase tracking-widest mb-6">{v.role}</p>
+                    <p className="text-slate-400 text-sm italic font-light leading-relaxed">"{v.bio}"</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       <Footer />
     </div>

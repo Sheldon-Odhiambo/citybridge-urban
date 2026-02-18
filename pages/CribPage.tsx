@@ -3,10 +3,10 @@ import React, { useState, useEffect, useCallback } from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import FloatingBlobs from '../components/FloatingBlobs';
-import { CRIB_PROGRAMS, CRIB_COHORTS, MINISTRIES, CRIB_TEAM, CRIB_VOLUNTEERS } from '../constants';
+import { CRIB_PROGRAMS, CRIB_COHORTS, MINISTRIES, CRIB_TEAM } from '../constants';
 
 const HERO_SLIDES = [
-  "/assets/BACK4.jpg",
+  "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&q=80&w=2000",
   "https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&q=80&w=2000",
   "https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&q=80&w=2000",
   "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&q=80&w=2000"
@@ -15,11 +15,11 @@ const HERO_SLIDES = [
 const TESTIMONIAL_VIDEOS = [
   {
     id: 1,
-    name: "Felix Kephar.",
+    name: "Samuel K.",
     cohort: "Cohort 1",
     title: "Finding My Rhythm",
     thumbnail: "https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&q=80&w=800",
-    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ" // Replace with your actual video URLs
+    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ" 
   },
   {
     id: 2,
@@ -27,7 +27,7 @@ const TESTIMONIAL_VIDEOS = [
     cohort: "Cohort 1",
     title: "The Lens of Hope",
     thumbnail: "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&q=80&w=800",
-    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ" // Replace with your actual video URLs
+    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ" 
   }
 ];
 
@@ -116,7 +116,7 @@ const CribPage: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 text-center relative z-20">
           <div className="reveal active">
             <div className="inline-block mb-10 px-8 py-2.5 bg-white/10 backdrop-blur-3xl border border-white/20 rounded-full shadow-[0_8px_32px_rgba(255,255,255,0.1)]">
-              <span className="text-white text-[11px] font-black uppercase tracking-[0.6em] animate-pulse">The Creative Space</span>
+              <span className="text-white text-[11px] font-black uppercase tracking-[0.6em] animate-pulse">The Creative Hub</span>
             </div>
             <h1 className="font-display font-black text-6xl md:text-8xl lg:text-9xl mb-10 uppercase tracking-tighter leading-[0.82] drop-shadow-2xl">
               <span className="text-transparent [-webkit-text-stroke:1px_white] md:[-webkit-text-stroke:2px_white]">CRIB</span> <br />
@@ -413,40 +413,6 @@ const CribPage: React.FC = () => {
                 </div>
               </div>
             ))}
-          </div>
-
-          <div className="bg-slate-950 rounded-[5rem] p-12 md:p-24 relative overflow-hidden shadow-3xl">
-            <div className="absolute top-0 right-0 p-16 pointer-events-none z-0">
-              <svg 
-                className="w-64 h-64 text-rose-500/10 animate-heartbeat" 
-                fill="currentColor" 
-                viewBox="0 0 24 24"
-              >
-                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
-              </svg>
-            </div>
-            
-            <div className="relative z-10 text-center mb-20">
-               <h4 className="text-white font-display font-black text-5xl uppercase tracking-tighter mb-4">
-                 <span className="text-transparent [-webkit-text-stroke:1px_white] md:[-webkit-text-stroke:2px_white]">Our</span> <span className="text-primary-500 italic">Volunteers.</span>
-               </h4>
-               <p className="text-slate-400 text-[10px] uppercase tracking-[0.6em] font-black">CityBridge Urban Center <span className="text-rose-500 animate-pulse mx-2">♥</span> Support Network</p>
-            </div>
-
-            <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto relative z-10">
-              {CRIB_VOLUNTEERS.map((v, i) => (
-                <div key={i} className="flex flex-col md:flex-row items-center gap-10 bg-white/5 backdrop-blur-xl p-10 rounded-[4rem] border border-white/10 group hover:bg-white/10 transition-all duration-500">
-                  <div className="w-32 h-32 rounded-full overflow-hidden flex-shrink-0 border-4 border-primary-500/30 group-hover:border-primary-500 group-hover:scale-105 transition-all duration-500">
-                     <img src={v.image} className="w-full h-full object-cover" alt={v.name} />
-                  </div>
-                  <div>
-                    <h5 className="text-white font-display font-black text-2xl uppercase tracking-tighter mb-1">{v.name}</h5>
-                    <p className="text-primary-400 text-[10px] font-black uppercase tracking-widest mb-6">{v.role}</p>
-                    <p className="text-slate-400 text-sm italic font-light leading-relaxed">"{v.bio}"</p>
-                  </div>
-                </div>
-              ))}
-            </div>
           </div>
         </div>
       </section>
