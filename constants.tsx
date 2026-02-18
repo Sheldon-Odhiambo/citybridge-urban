@@ -60,14 +60,14 @@ export const TEAM_MEMBERS: TeamMember[] = [
     name: "Pastor Roy Mugambi",
     role: "Lead Pastor of Fountain of Hope Church of the Nazarene",
     image: "/assets/proy.jpeg",
-    bio: "Pastor Roy leads Fountain of Hope with a mission to bridge the gap between church and community through home visits, prayer, and food hampers.",
+    bio: "Pastor Roy leads Fountain of Hope with a mission to bridge the gap between church and community.",
     specialty: "Spiritual Leadership"
   },
   {
     name: "Keith Tadiwanashe Manokore",
     role: "Leader of CityBridge & Co-founder of Crib Connection",
     image: "/assets/TADI.jpeg",
-    bio: "Keith leads CityBridge Urban Center and co-founded Crib Connection, focusing on urban strategy and creative community growth.",
+    bio: "Keith leads CityBridge Urban Center and co-founded Crib Connection, focusing on business growth, urban strategy, and community innovation.",
     specialty: "Urban Strategy & Leadership"
   },
   {
@@ -81,62 +81,62 @@ export const TEAM_MEMBERS: TeamMember[] = [
 
 export const CRIB_TEAM = [
   {
-    name: "Wesley",
-    role: "Creative Strategist & Mentor",
+    name: "Wesley Kikoti",
+    role: "Incharge of Arts",
     image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=800",
     hoverImage: "https://images.unsplash.com/photo-1488161628813-04466f872be2?auto=format&fit=crop&q=80&w=800",
-    bio: "Wesley crafts the strategic vision for our creative mastery tracks, ensuring every project aligns with community restoration."
+    bio: "Wesley Kikoti is responsible for coordinating arts and creative initiatives, fostering creativity, and supporting artistic growth within the team."
   },
   {
-    name: "Tadiwanashe",
+    name: "Keith Manokore",
     role: "Co-founder & Urban Visionary",
     image: "/assets/TADI.jpeg",
     hoverImage: "https://images.unsplash.com/photo-1534030347209-467a5b0ad3e6?auto=format&fit=crop&q=80&w=800",
     bio: "Keith Tadiwanashe bridges the gap between urban strategy and ground-level action in Kandisi."
   },
-  {
-    name: "Caleb",
-    role: "Co-founder & Creative Director",
+  { 
+    name: "Caleb Magaya",
+    role: "Co-founder & Art Strategist",
     image: "assets/magaya.jpeg",
     hoverImage: "https://images.unsplash.com/photo-1492562080023-ab3dbdf5bbbb?auto=format&fit=crop&q=80&w=800",
-    bio: "Caleb leads the studio production and technical mastery tracks at the Crib."
+    bio: "Caleb is the Co-Founder and Art Strategist, providing creative direction and strategic guidance to shape impactful and meaningful work."
   },
   {
-    name: "Mitchelina",
+    name: "Mitchelina Kisoi",
     role: "Tresurer",
     image: "/assets/cohort4.jpg",
     hoverImage: "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&q=80&w=800",
-    bio: "Naomi designs the interactive classroom experiences and manages community pulse and culture."
+    bio: "Mitchelina oversees finances, managing resources responsibly and ensuring transparency to support the organization’s goals and growth."
   },
   {
-    name: "Dabasa",
-    role: "Technical Lead & Audio Engineer",
+    name: "Charity Dabasa",
+    role: "Technical Lead & Media Engineer",
     image: "/assets/dabasa.jpg",
     hoverImage: "https://images.unsplash.com/photo-1506803682981-6e718a9dd3ee?auto=format&fit=crop&q=80&w=800",
-    bio: "Dabasa manages our high-end audio production and mentors sound engineering participants."
+    bio: "Dabasa is Responsible for technical operations and media production, ensuring systems run smoothly and content is delivered effectively."
   },
   {
     name: "Naomi",
     role: "Experience Designer & Community Coordinator",
     image: "/assets/naomi.jpg",
     hoverImage: "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&q=80&w=800",
-    bio: "Naomi designs the interactive classroom experiences and manages community pulse and culture."
+    bio: "Naomi serves as Secretary, ensuring effective communication, organization, and smooth coordination of activities while supporting the team with diligence and attention to detail."
   }
 
 ];
 
 export const CRIB_VOLUNTEERS = [
   {
-    name: "Ushe",
+    name: "Joy Ushe",
     role: "Media Volunteer",
     image: "/assets/ushe.jpg",
-    bio: "Ushe supports our media production and visual storytelling during live events."
+    bio: "Joy serves as a volunteer in the kids programme, supporting activities and creating a warm, welcoming environment where children feel valued and encouraged."
   },
   {
-    name: "Keffar",
+    name: "Felix Kephar",
     role: "Studio Support Volunteer",
     image: "https://images.unsplash.com/photo-1501196354995-cbb51c65aaea?auto=format&fit=crop&q=80&w=800",
-    bio: "Keffar ensures the studio environment is always ready for creative action and skill exchange."
+    bio: "Kepha volunteers in the kids programme, assisting with activities and helping nurture positive growth and creativity among the children."
   }
 ];
 
@@ -162,6 +162,7 @@ export const PROGRAMS: DetailedProgram[] = [
       { url: "https://images.unsplash.com/photo-1526676037777-05a232554f77?auto=format&fit=crop&q=80&w=1200", label: "Weekend Reachout" }
     ]
   },
+  
   {
     id: 'next-gen',
     title: "Next Gen Mentors",
@@ -182,6 +183,8 @@ export const PROGRAMS: DetailedProgram[] = [
       { url: "/assets/gen7.jpg", label: "Weekend Impact Log" },
       { url: "/assets/gen1.jpg", label: "Future Architects" }
     ]
+    
+    
   },
   {
     id: 'skill-launchpad',
