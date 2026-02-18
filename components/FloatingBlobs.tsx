@@ -1,35 +1,81 @@
-
 import React from 'react';
 
-const FloatingBlobs: React.FC = () => {
+const GlassGlowBlobs: React.FC = () => {
   return (
-    <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
-      {/* Primary Blob */}
-      <div className="absolute top-[10%] -left-[10%] animate-drift opacity-[0.12]">
-        <div className="w-[45vw] h-[45vw] bg-primary-500 blur-[120px] animate-morph"></div>
-      </div>
-      
-      {/* Accent Blob */}
-      <div className="absolute bottom-[10%] -right-[10%] animate-drift opacity-[0.1] [animation-delay:-7s]">
-        <div className="w-[40vw] h-[40vw] bg-accent-teal blur-[100px] animate-morph [animation-delay:-4s]"></div>
-      </div>
-      
-      {/* Secondary Floating Element */}
-      <div className="absolute top-1/4 right-1/4 animate-float opacity-[0.08] [animation-delay:-2s]">
-        <div className="w-[25vw] h-[25vw] bg-primary-400 blur-[90px] rounded-full"></div>
-      </div>
+    <div className="absolute inset-0 overflow-hidden pointer-events-none z-10">
 
-      {/* Center Soft Glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 animate-pulse-soft opacity-[0.06] [animation-delay:-3s]">
-        <div className="w-[30vw] h-[30vw] bg-primary-300 blur-[100px] rounded-full"></div>
-      </div>
+      {/* Blob 1 */}
+      <div className="glass-blob blob-1"></div>
 
-      {/* Tiny Moving Accents */}
-      <div className="absolute top-[60%] left-[15%] animate-drift opacity-[0.05] [animation-delay:-12s]">
-        <div className="w-[15vw] h-[15vw] bg-accent-yellow blur-[60px] animate-morph"></div>
-      </div>
+      {/* Blob 2 */}
+      <div className="glass-blob blob-2"></div>
+
+      {/* Blob 3 */}
+      <div className="glass-blob blob-3"></div>
+
+      {/* Blob 4 */}
+      <div className="glass-blob blob-4"></div>
+
+      <style>{`
+        .glass-blob {
+          position: absolute;
+          border-radius: 50%;
+          backdrop-filter: blur(100px) brightness(1.2);
+          background: rgba(59, 130, 246, 0.25); /* semi-transparent blue */
+          box-shadow: 0 0 120px rgba(59, 130, 246, 0.4);
+          animation: drift 40s ease-in-out infinite alternate,
+                     breathe 15s ease-in-out infinite;
+        }
+
+        .blob-1 {
+          width: 50vw;
+          height: 50vw;
+          top: -10%;
+          left: -10%;
+        }
+
+        .blob-2 {
+          width: 40vw;
+          height: 40vw;
+          bottom: -10%;
+          right: -15%;
+          background: rgba(37, 99, 235, 0.25);
+          box-shadow: 0 0 100px rgba(37, 99, 235, 0.4);
+          animation-delay: 5s;
+        }
+
+        .blob-3 {
+          width: 35vw;
+          height: 35vw;
+          top: 30%;
+          left: 45%;
+          background: rgba(96, 165, 250, 0.25);
+          box-shadow: 0 0 90px rgba(96, 165, 250, 0.35);
+          animation-delay: 8s;
+        }
+
+        .blob-4 {
+          width: 25vw;
+          height: 25vw;
+          bottom: 20%;
+          left: 20%;
+          background: rgba(147, 197, 253, 0.25);
+          box-shadow: 0 0 80px rgba(147, 197, 253, 0.3);
+          animation-delay: 12s;
+        }
+
+        @keyframes drift {
+          0% { transform: translate(0px, 0px); }
+          100% { transform: translate(70px, -50px); }
+        }
+
+        @keyframes breathe {
+          0%, 100% { transform: scale(1); opacity: 0.25; }
+          50% { transform: scale(1.08); opacity: 0.45; }
+        }
+      `}</style>
     </div>
   );
 };
 
-export default FloatingBlobs;
+export default GlassGlowBlobs;
