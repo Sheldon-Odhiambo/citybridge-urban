@@ -15,19 +15,19 @@ const HERO_SLIDES = [
 const TESTIMONIAL_VIDEOS = [
   {
     id: 1,
-    name: "Samuel K.",
+    name: "Felix Kepha.",
     cohort: "Cohort 1",
     title: "Finding My Rhythm",
     thumbnail: "https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&q=80&w=800",
-    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ" 
+    videoUrl: "/assets/vid2.mp4" 
   },
   {
     id: 2,
-    name: "Faith M.",
+    name: "Mercyline Mboya.",
     cohort: "Cohort 1",
     title: "The Lens of Hope",
     thumbnail: "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&q=80&w=800",
-    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ" 
+    videoUrl: "/assets/vid1.mp4" 
   }
 ];
 
