@@ -386,32 +386,37 @@ const CribPage: React.FC = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-16 lg:gap-20 mb-32">
             {CRIB_TEAM.map((member, idx) => (
-              <div 
-                key={idx} 
-                className={`reveal stagger-1 group relative flex flex-col items-center text-center p-8 rounded-[4rem] transition-all duration-500 hover:scale-[1.03] hover:shadow-[0_40px_100px_-20px_rgba(0,0,0,0.1)] ${idx === 6 ? 'lg:col-start-2' : ''}`}
-              >
-                <div className="relative w-full aspect-[4/5] rounded-[4rem] overflow-hidden mb-10 shadow-3xl bg-slate-200 border-[12px] border-white group-hover:border-primary-100 group-hover:shadow-primary-600/10 transition-all duration-700">
-                   <img 
-                    src={member.image} 
-                    className="w-full h-full object-cover grayscale-[0.3] group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-105" 
-                    alt={member.name} 
-                   />
-                   <div className="absolute inset-0 bg-gradient-to-t from-slate-950/40 via-transparent to-transparent opacity-60"></div>
-                </div>
+              <div
+              key={idx}
+              className="group relative h-[520px] overflow-hidden cursor-pointer transition-all duration-500"
+            >
+              {/* Image */}
+              <img
+                src={member.image}
+                alt={member.name}
+                className="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700"
+              />
 
-                <div className="w-full px-4">
-                  <h4 className="font-display font-black text-3xl text-slate-900 uppercase tracking-tighter mb-1 transition-colors duration-500 group-hover:text-primary-600">{member.name}</h4>
-                  <p className="text-primary-600 text-[10px] font-black uppercase tracking-[0.3em] mb-6 transition-all duration-500">{member.role}</p>
-                  
-                  <div className="relative overflow-hidden transition-all duration-700 max-h-0 opacity-0 group-hover:max-h-32 group-hover:opacity-100">
-                    <div className="pt-6 border-t border-slate-200">
-                      <p className="text-slate-500 text-base font-light italic leading-relaxed px-4">
-                        "{member.bio}"
-                      </p>
-                    </div>
-                  </div>
-                </div>
+              {/* Dark overlay */}
+              <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all duration-500"></div>
+
+              {/* Vertical name tag */}
+              <div className="absolute bottom-0 left-0 bg-red-600 text-white px-3 py-6 rotate-[-90deg] origin-bottom-left translate-y-full group-hover:translate-y-0 transition-all duration-500">
+                <p className="font-bold tracking-widest text-sm uppercase">
+                  {member.name}
+                </p>
               </div>
+
+              {/* Role + bio reveal */}
+              <div className="absolute inset-x-0 bottom-0 p-6 translate-y-full group-hover:translate-y-0 transition-all duration-500">
+                <p className="text-red-400 text-xs uppercase tracking-widest mb-2">
+                  {member.role}
+                </p>
+                <p className="text-white text-sm italic">
+                  "{member.bio}"
+                </p>
+              </div>
+            </div>
             ))}
           </div>
         </div>
