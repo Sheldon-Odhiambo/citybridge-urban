@@ -88,7 +88,7 @@ export const CRIB_TEAM = [
   {
     name: "Wesley Kikoti",
     role: "Incharge of Arts",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=800",
+    image: "/assets/wesley.jpeg",
     hoverImage: "https://images.unsplash.com/photo-1488161628813-04466f872be2?auto=format&fit=crop&q=80&w=800",
     bio: "Wesley Kikoti is responsible for coordinating arts and creative initiatives, fostering creativity, and supporting artistic growth within the team."
   },
