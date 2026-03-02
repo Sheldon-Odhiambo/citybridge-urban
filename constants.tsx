@@ -92,12 +92,27 @@ export const CRIB_TEAM = [
     hoverImage: "https://images.unsplash.com/photo-1488161628813-04466f872be2?auto=format&fit=crop&q=80&w=800",
     bio: "Wesley Kikoti is responsible for coordinating arts and creative initiatives, fostering creativity, and supporting artistic growth within the team."
   },
+   {
+    name: "Mitchelina Kisoi",
+    role: "Tresurer",
+    image: "/assets/Mitchelina.jpeg",
+    hoverImage: "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&q=80&w=800",
+    bio: "Mitchelina oversees finances, managing resources responsibly and ensuring transparency to support the organization’s goals and growth."
+  },
+  
   {
     name: "Keith Manokore",
     role: "Co-founder & Urban Visionary",
     image: "/assets/TADI.jpeg",
     hoverImage: "https://images.unsplash.com/photo-1534030347209-467a5b0ad3e6?auto=format&fit=crop&q=80&w=800",
     bio: "Keith Tadiwanashe bridges the gap between urban strategy and ground-level action in Kandisi."
+  },
+    {
+    name: "Charity Dabasa",
+    role: "Technical Lead & Media Engineer",
+    image: "/assets/dabasa.jpg",
+    hoverImage: "https://images.unsplash.com/photo-1506803682981-6e718a9dd3ee?auto=format&fit=crop&q=80&w=800",
+    bio: "Dabasa is Responsible for technical operations and media production, ensuring systems run smoothly and content is delivered effectively."
   },
   { 
     name: "Caleb Magaya",
@@ -106,27 +121,21 @@ export const CRIB_TEAM = [
     hoverImage: "https://images.unsplash.com/photo-1492562080023-ab3dbdf5bbbb?auto=format&fit=crop&q=80&w=800",
     bio: "Caleb is the Co-Founder and Art Strategist, providing creative direction and strategic guidance to shape impactful and meaningful work."
   },
-  {
-    name: "Mitchelina Kisoi",
-    role: "Tresurer",
-    image: "/assets/cohort4.jpg",
-    hoverImage: "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&q=80&w=800",
-    bio: "Mitchelina oversees finances, managing resources responsibly and ensuring transparency to support the organization’s goals and growth."
-  },
-  {
-    name: "Charity Dabasa",
-    role: "Technical Lead & Media Engineer",
-    image: "/assets/dabasa.jpg",
-    hoverImage: "https://images.unsplash.com/photo-1506803682981-6e718a9dd3ee?auto=format&fit=crop&q=80&w=800",
-    bio: "Dabasa is Responsible for technical operations and media production, ensuring systems run smoothly and content is delivered effectively."
-  },
+
   {
     name: "Naomi",
     role: "Experience Designer & Community Coordinator",
     image: "/assets/naomi.jpg",
     hoverImage: "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&q=80&w=800",
     bio: "Naomi serves as Secretary, ensuring effective communication, organization, and smooth coordination of activities while supporting the team with diligence and attention to detail."
-  }
+  },
+    {
+    name: "Hardley",
+    role: "Project Manager ",
+    image: "/assets/hardley.jpeg",
+    hoverImage: "https://images.unsplash.com/photo-1506803682981-6e718a9dd3ee?auto=format&fit=crop&q=80&w=800",
+    bio: "Hardley serves as the Project Manager, overseeing technical operations and media production to ensure efficient system performance and effective content delivery."
+  },
 
 ];
 
