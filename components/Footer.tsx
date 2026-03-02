@@ -127,13 +127,13 @@ const Footer: React.FC = () => {
                 </div>
                 <p className="text-slate-300 text-sm leading-relaxed pt-1 group-hover:text-white transition-colors">Urban District<br />Kandisi, Kenya</p>
               </div>
-              <a href="mailto:info@citybridgeurban.org" className="flex items-start gap-4 group">
+              <a href="mailto:citybridgecenter@gmail.com" className="flex items-start gap-4 group">
                 <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center flex-shrink-0 text-primary-500 group-hover:bg-primary-600 group-hover:text-white transition-all shadow-lg group-hover:scale-110 group-hover:rotate-3">
                   <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2-2v10a2 2 0 002 2z"/>
                   </svg>
                 </div>
-                <p className="text-slate-300 text-sm pt-2 group-hover:text-white transition-colors">info@citybridgeurban.org</p>
+                <p className="text-slate-300 text-sm pt-2 group-hover:text-white transition-colors"> citybridgecenter@gmail.com</p>
               </a>
             </div>
           </div>
